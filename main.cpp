@@ -9,7 +9,8 @@
 
 int main() {
     const char *LOG_FILE = "/mnt/c/Users/User/Desktop/programs/stack/log.txt";
-    const char *LOG_FILE = "C://Users//User//Desktop//programs//stack//log.txt";
+    
+    // const char *LOG_FILE = "C://Users//User//Desktop//programs//stack//log.txt";
 
     FILE *log = fopen(LOG_FILE, "w");
 
