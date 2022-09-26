@@ -7,10 +7,6 @@ void to_dump(stack *stk, FILE *log) {
     assert(log != nullptr && "coudn't open file");
     assert(stk != nullptr && "coudn't open file");
 
-    stk->info.FUNC_CALL =      __FUNCTION__;
-    stk->info.LINE_CALL =      __LINE__;
-    stk->info.NAME_FILE_CALL = __FILE__;
-
     fprintf(log, "\n%s() at %s(%d)\n", stk->info.FUNC_CALL, stk->info.NAME_FILE_CALL, stk->info.LINE_CALL);
     fprintf(log, "Stack[%p] ", stk);
 

@@ -10,32 +10,32 @@ void stack_ctor(stack *stk, size_t capasity) {
     stk->capacity = capasity;
     stk->data = (elem_stk *)calloc(capasity + 1, sizeof(elem_stk));
     stk->size = 0;
-    assert_ok(stk);
+    ASSERT(stk);
 
 }
 
 void stack_dtor(stack *stk) {
-    assert_ok(stk);
+    ASSERT(stk);
 
     free(stk->data);
     stk->data = nullptr;
     stk->capacity = -1;
     stk->size = -1;
-    assert_ok(stk);
+    ASSERT(stk);
 
 }
 
 void stack_push(stack *stk, double elem) {
-    assert_ok(stk);
+    ASSERT(stk);
     if (stk->size >= stk->capacity) stack_resize(stk);
     stk->data[stk->size] = elem;
     (stk->size)++;
-    assert_ok(stk);
+    ASSERT(stk);
 
 }
 
 void stack_resize(stack *stk) {
-    assert_ok(stk);
+    ASSERT(stk);
 
     if (stk->capacity == stk->size) {
         stk->capacity *= multiple;
@@ -46,18 +46,18 @@ void stack_resize(stack *stk) {
     for (long unsigned i = stk->size; i < stk->capacity; i++)
         stk->data[i] = NAN;
 
-    assert_ok(stk);
+    ASSERT(stk);
 }
 
 void stack_pop(stack *stk, elem_stk *value) {
-    assert_ok(stk);
+    ASSERT(stk);
 
     *value = stk->data[stk->size];
     stk->size--;
     stk->data[stk->size] = NAN;
     if (stk->size + 1 == stk->capacity/2 && stk->size >= 10) stack_resize(stk);
 
-    assert_ok(stk);
+    ASSERT(stk);
 }
 
 

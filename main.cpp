@@ -5,15 +5,11 @@
 #include <stdio.h>
 #include <assert.h>
 
-// TODO сделать свой ассерт, коды ошибок, понять как дамп сделать макросомч
 
 
 int main() {
     const char *LOG_FILE = "/mnt/c/Users/User/Desktop/programs/stack/log.txt";
     // const char *LOG_FILE = "C://Users//User//Desktop//programs//stack//log.txt";
-    printf("gfds");
-
-    printf("gfds");
 
     FILE *log = fopen(LOG_FILE, "w");
 
@@ -35,7 +31,6 @@ int main() {
     };
 
     stack_ctor(&stk1, 10);
-    assert(stk1.data != nullptr && "null pointer");
     to_dump(&stk1, log);
     for (int i = 1; i <= 40; i++) {
         stack_push(&stk1, i);
