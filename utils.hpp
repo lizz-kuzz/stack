@@ -8,7 +8,7 @@
 
 #define multiple 2
 
-typedef double elem_stk;
+typedef double elem_stk_t;
 
 
 typedef struct {
@@ -25,7 +25,7 @@ typedef struct {
 } stack_info;
 
 typedef struct {
-    elem_stk   *data;
+    elem_stk_t   *data;
     size_t     size;
     size_t     capacity;
     stack_info info;

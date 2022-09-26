@@ -1,6 +1,9 @@
 #include "error.hpp"
+#define ASSERT(stk) stk->info.FUNC_CALL =      __FUNCTION__; \
+                    stk->info.LINE_CALL =      __LINE__;     \
+                    stk->info.NAME_FILE_CALL = __FILE__;     \
+                    assert_ok(stk);
 
-// extern FILE *log = fopen("/mnt/c/Users/User/Desktop/programs/stack/log.txt", "w");
 
 void to_dump(stack *stk, FILE *log) {  
     // как сделать макросом?

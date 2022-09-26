@@ -6,9 +6,10 @@
 // extern FILE *log = fopen("/mnt/c/Users/User/Desktop/programs/stack/log.txt", "w");
 
 
-void stack_ctor(stack *stk, size_t capasity) {
-    stk->capacity = capasity;
-    stk->data = (elem_stk *)calloc(capasity + 1, sizeof(elem_stk));
+void stack_ctor(stack *stk, size_t capacity) {
+
+    stk->capacity = capacity;
+    stk->data = (elem_stk_t *) calloc(capacity + 1, sizeof(elem_stk_t));
     stk->size = 0;
     ASSERT(stk);
 
@@ -16,7 +17,7 @@ void stack_ctor(stack *stk, size_t capasity) {
 
 void stack_dtor(stack *stk) {
     ASSERT(stk);
-
+    to_dump(stk, logs_);
     free(stk->data);
     stk->data = nullptr;
     stk->capacity = -1;
@@ -27,6 +28,8 @@ void stack_dtor(stack *stk) {
 
 void stack_push(stack *stk, double elem) {
     ASSERT(stk);
+    to_dump(stk, logs_);
+
     if (stk->size >= stk->capacity) stack_resize(stk);
     stk->data[stk->size] = elem;
     (stk->size)++;
@@ -36,21 +39,25 @@ void stack_push(stack *stk, double elem) {
 
 void stack_resize(stack *stk) {
     ASSERT(stk);
+    to_dump(stk, logs_);
+
 
     if (stk->capacity == stk->size) {
         stk->capacity *= multiple;
     } else if (stk->size + 1 == stk->capacity/multiple) {
         stk->capacity /= multiple; 
     }
-    stk->data = (elem_stk *)realloc(stk->data, stk->capacity*sizeof(elem_stk));
+    stk->data = (elem_stk_t *)realloc(stk->data, stk->capacity*sizeof(elem_stk_t));
     for (long unsigned i = stk->size; i < stk->capacity; i++)
         stk->data[i] = NAN;
 
     ASSERT(stk);
 }
 
-void stack_pop(stack *stk, elem_stk *value) {
+void stack_pop(stack *stk, elem_stk_t *value) {
     ASSERT(stk);
+    to_dump(stk, logs_);
+
 
     *value = stk->data[stk->size];
     stk->size--;

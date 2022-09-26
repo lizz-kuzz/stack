@@ -11,6 +11,6 @@ void stack_dtor(stack *stk);
 
 void stack_resize(stack *stk);
 
-void stack_pop(stack *stk, elem_stk *value);
+void stack_pop(stack *stk, elem_stk_t *value);
 
 #endif
