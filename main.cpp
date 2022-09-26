@@ -28,7 +28,6 @@ int main() {
     stack stk1 = {};
 
     stack_ctor(stk1, 10);
-    to_dump(&stk1, logs_);
     for (int i = 1; i <= 40; i++) {
         stack_push(&stk1, i);
     }

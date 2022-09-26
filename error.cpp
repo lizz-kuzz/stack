@@ -1,7 +1,7 @@
 #include "error.hpp"
 
 
-#if DEBUG == 2 || DEBUG == 3 || DEBUG == 4
+#if MODE == 2 || MODE == 3 || MODE == 4
 void to_dump(stack *stk, FILE *log) {  
     assert(log != nullptr && "coudn't open file");
 
@@ -58,21 +58,21 @@ void assert_ok(stack *stk) {
         stk->info.number_of_error = NULL_POINT_TO_STACK;
     }
 
-    #if DEBUG == 4
+    #if MODE == 4
         if (stk->data == NULL) {
             stk->info.number_of_error = NULL_POINT_DATE;
         } else if (stk->size > stk->capacity) {
             stk->info.number_of_error = SIZE_MORE_THAN_CAPACITY;
         } else if (stk->size == -1 || stk->capacity == -1) {
             stk->info.number_of_error = SIZE_OR_CAPACITY_NEGATIVE;
-        } else if (stk->canaries_left == CANARIES_LEFT || stk->canaries_right == CANARIES_RIGHT) {
+        } else if (stk->canaries_left != CANARIES_LEFT || stk->canaries_right != CANARIES_RIGHT) {
             stk->info.number_of_error = ERROR_CANARIES;
         } else if (stk->hash == 1) {        // TODO
             stk->info.number_of_error = ERROR_HASH;
-        } else if ((stk->canaries_left == CANARIES_LEFT || stk->canaries_right == CANARIES_RIGHT) && stk->hash == 1) {
+        } else if ((stk->canaries_left != CANARIES_LEFT || stk->canaries_right != CANARIES_RIGHT) && stk->hash == 1) {
             stk->info.number_of_error = ERROR_CANARIES_HASH;
         }
-    #elif DEBUG == 3
+    #elif MODE == 3
         if (stk->data == NULL) {
             stk->info.number_of_error = NULL_POINT_DATE;
         } else if (stk->size > stk->capacity) {
@@ -82,7 +82,7 @@ void assert_ok(stack *stk) {
         } else if (stk->hash == 1) {        // TODO
             stk->info.number_of_error = ERROR_HASH;
         }
-    #elif DEBUG == 2
+    #elif MODE == 2
         if (stk->data == NULL) {
             stk->info.number_of_error = NULL_POINT_DATE;
         } else if (stk->size > stk->capacity) {
@@ -92,7 +92,7 @@ void assert_ok(stack *stk) {
         } else if (stk->hash == 1) {        // TODO
             stk->info.number_of_error = ERROR_HASH;
         }
-    #elif DEBUG == 1
+    #elif MODE == 1
         if (stk->data == NULL) {
             stk->info.number_of_error = NULL_POINT_DATE;
         } else if (stk->size > stk->capacity) {

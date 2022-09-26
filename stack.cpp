@@ -5,52 +5,59 @@
 
 
 void stack_ctor_(stack *stk, size_t capacity) {
-    ASSERT(stk)
-
     stk->capacity = capacity;
     stk->data = (elem_stk_t *) calloc(capacity + 1, sizeof(elem_stk_t));
     for (unsigned i = 0; i < stk->capacity; i++) {
         stk->data[i] = NAN;
     }
     stk->size = 0;
-    #if DEBUG != 1
-        stk->info.number_of_error = 0;
-    #endif
-    #if DEBUG == 4 || DEBUG == 2
-        stk->canaries_left = CANARIES_LEFT;
+
+    #if MODE == 4 || MODE == 2
+        stk->canaries_left  = CANARIES_LEFT;
         stk->canaries_right = CANARIES_RIGHT;
     #endif
+    #if MODE != 1
+        ASSERT(stk);
+    #endif
 
-    ASSERT(stk);
-
+    
 }
 
 void stack_dtor(stack *stk) {
-    ASSERT(stk);
+    #if MODE != 1
+        ASSERT(stk);
+    #endif
 
-    to_dump(stk, logs_);
     free(stk->data);
     stk->data = nullptr;
     stk->capacity = -1;
     stk->size = -1;
-    ASSERT(stk);
 
+    #if MODE != 1
+        ASSERT(stk);
+    #endif
+    
 }
 
 void stack_push(stack *stk, double elem) {
-    ASSERT(stk);
-
-    to_dump(stk, logs_);
+    #if MODE != 1
+        ASSERT(stk);
+    #endif
 
     if (stk->size >= stk->capacity) stack_resize(stk);
     stk->data[stk->size] = elem;
     (stk->size)++;
-    ASSERT(stk);
+
+    #if MODE != 1
+        ASSERT(stk);
+    #endif
 
 }
 
 void stack_resize(stack *stk) {
-    ASSERT(stk);
+    #if MODE != 1
+        ASSERT(stk);
+    #endif
 
     to_dump(stk, logs_);
 
@@ -63,21 +70,24 @@ void stack_resize(stack *stk) {
     for (long unsigned i = stk->size; i < stk->capacity; i++)
         stk->data[i] = NAN;
 
-    ASSERT(stk);
+    #if MODE != 1
+        ASSERT(stk);
+    #endif
 }
 
 void stack_pop(stack *stk, elem_stk_t *value) {
-    ASSERT(stk);
-
-    to_dump(stk, logs_);
-
+    #if MODE != 1
+        ASSERT(stk);
+    #endif
 
     *value = stk->data[stk->size];
     stk->size--;
     stk->data[stk->size] = NAN;
     if (stk->size + 1 == stk->capacity/MULTIPLE && stk->size >= 10) stack_resize(stk);
-
-    ASSERT(stk);
+    
+    #if MODE != 1
+        ASSERT(stk);
+    #endif
 }
 
 

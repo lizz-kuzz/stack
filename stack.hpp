@@ -2,12 +2,14 @@
 #define STACK_HPP_INCLUDED
 
 #include "utils.hpp"
-
-#define stack_ctor(stk, num) stk.info.FUNC =       __FUNCTION__; \
-                             stk.info.LINE =       __LINE__;     \
-                             stk.info.NAME_FILE =  __FILE__;     \
-                             stk.info.NAME_STACK = #stk;     \
-                             stack_ctor_(&stk, num);
+// добавить условие 
+#if MODE != 1
+    #define stack_ctor(stk, num) stk.info.FUNC       = __FUNCTION__; \
+                                 stk.info.LINE       = __LINE__;     \
+                                 stk.info.NAME_FILE  = __FILE__;     \
+                                 stk.info.NAME_STACK = #stk;         \
+                                 stack_ctor_(&stk, num);
+#endif
 
 void stack_ctor_(stack *stk, size_t capasity);
 

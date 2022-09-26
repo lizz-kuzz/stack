@@ -6,10 +6,10 @@
 #include <assert.h>
 #include <math.h>
 
-#define DEBUG 4 //с чиселками работает а не с чиселками нет 
+#define MODE 4 //с чиселками работает а не с чиселками нет 
 #define MULTIPLE 2
 
-#if DEBUG == 4 || DEBUG == 2
+#if MODE == 4 || MODE == 2
     #define CANARIES_LEFT  0xDEADF00D
     #define CANARIES_RIGHT 0xDEADBABE
 #endif
@@ -39,7 +39,7 @@ enum DEBUG_ {
 };
 
 typedef struct {
-    #if DEBUG == 4
+    #if MODE == 4
         unsigned long long canaries_left;
         elem_stk_t         *data;
         size_t             size;
@@ -47,20 +47,20 @@ typedef struct {
         stack_info         info;
         unsigned long long hash;
         unsigned long long canaries_right;
-    #elif DEBUG == 3
+    #elif MODE == 3
         elem_stk_t         *data;
         size_t             size;
         size_t             capacity;
         stack_info         info;
         unsigned long long hash;
-    #elif DEBUG == 2
+    #elif MODE == 2
         unsigned long long canaries_left;
         elem_stk_t         *data;
         size_t             size;
         size_t             capacity;
         stack_info         info;
         unsigned long long canaries_right;
-    #elif DEBUG == 1
+    #elif MODE == 1
         elem_stk_t         *data;
         size_t             size;
         size_t             capacity;
