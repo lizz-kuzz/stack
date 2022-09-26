@@ -34,6 +34,14 @@
     "list": "cpp",
     "string": "cpp",
     "vector": "cpp",
-    "functional": "cpp"
+    "functional": "cpp",
+    "exception": "cpp",
+    "istream": "cpp",
+    "limits": "cpp",
+    "typeinfo": "cpp",
+    "array": "cpp",
+    "hash_map": "cpp",
+    "bitset": "cpp",
+    "initializer_list": "cpp"
   }
 }

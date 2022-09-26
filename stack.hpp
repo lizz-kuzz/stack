@@ -3,7 +3,13 @@
 
 #include "utils.hpp"
 
-void stack_ctor(stack *stk, size_t capasity);
+#define stack_ctor(stk, num) stk.info.FUNC =       __FUNCTION__; \
+                             stk.info.LINE =       __LINE__;     \
+                             stk.info.NAME_FILE =  __FILE__;     \
+                             stk.info.NAME_STACK = #stk;     \
+                             stack_ctor_(&stk, num);
+
+void stack_ctor_(stack *stk, size_t capasity);
 
 void stack_push(stack *stk, double elem);
 

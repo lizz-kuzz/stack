@@ -6,7 +6,9 @@
 #include <assert.h>
 #include <math.h>
 
-#define multiple 2
+#define MULTIPLE 2
+
+#define DEBUG 4 //с чиселками работает а не с чиселками нет 
 
 typedef double elem_stk_t;
 
@@ -17,24 +19,57 @@ typedef struct {
     int        LINE;
     const char *FUNC; 
     const char *NAME_FILE;
+    const char *NAME_STACK;
 // инфа о месте где вызван dump
     int        LINE_CALL;
     const char *FUNC_CALL; 
     const char *NAME_FILE_CALL;
-
 } stack_info;
 
+enum DEBUG_ {
+    RELIZE = 1,
+    DEBUG_CANARIES = 2,
+    DEBUG_HASH = 3,
+    DEBUG_HASH_CANARIES = 4,
+};
+
 typedef struct {
-    elem_stk_t   *data;
-    size_t     size;
-    size_t     capacity;
-    stack_info info;
+    #if DEBUG == 4
+        unsigned long long canaries_left;
+        elem_stk_t         *data;
+        size_t             size;
+        size_t             capacity;
+        stack_info         info;
+        unsigned long long hash;
+        unsigned long long canaries_right;
+    #elif DEBUG == 3
+        elem_stk_t         *data;
+        size_t             size;
+        size_t             capacity;
+        stack_info         info;
+        unsigned long long hash;
+    #elif DEBUG == 2
+        unsigned long long canaries_left;
+        elem_stk_t         *data;
+        size_t             size;
+        size_t             capacity;
+        stack_info         info;
+        unsigned long long canaries_right;
+    #elif DEBUG == 1
+        elem_stk_t         *data;
+        size_t             size;
+        size_t             capacity;
+    #endif
 } stack;
 
 enum ERRORS {
     NULL_POINT_DATE           = 1,
     SIZE_MORE_THAN_CAPACITY   = 2,
     SIZE_OR_CAPACITY_NEGATIVE = 3, 
+    ERROR_HASH = 4,
+    ERROR_CANARIES = 5,
+    ERROR_CANARIES_HASH = 6,
 };
+
 
 #endif

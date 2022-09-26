@@ -1,9 +1,9 @@
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_ctor_() at stack.cpp(12)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 0
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 0
 *[1] = 0
@@ -17,11 +17,29 @@ data [0x55ce21865490]
 *[9] = 0
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
+size = 0
+cappacity = 10
+data [0x56176f01e490]
+{
+*[0] = 0
+*[1] = 0
+*[2] = 0
+*[3] = 0
+*[4] = 0
+*[5] = 0
+*[6] = 0
+*[7] = 0
+*[8] = 0
+*[9] = 0
+}
+
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 1
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 1
 *[1] = 0
@@ -35,11 +53,11 @@ data [0x55ce21865490]
 *[9] = 0
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 2
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 1
 *[1] = 2
@@ -53,11 +71,11 @@ data [0x55ce21865490]
 *[9] = 0
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 3
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 1
 *[1] = 2
@@ -71,11 +89,11 @@ data [0x55ce21865490]
 *[9] = 0
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 4
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 1
 *[1] = 2
@@ -89,11 +107,11 @@ data [0x55ce21865490]
 *[9] = 0
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 5
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 1
 *[1] = 2
@@ -107,11 +125,11 @@ data [0x55ce21865490]
 *[9] = 0
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 6
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 1
 *[1] = 2
@@ -125,11 +143,11 @@ data [0x55ce21865490]
 *[9] = 0
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 7
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 1
 *[1] = 2
@@ -143,11 +161,11 @@ data [0x55ce21865490]
 *[9] = 0
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 8
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 1
 *[1] = 2
@@ -161,11 +179,11 @@ data [0x55ce21865490]
 *[9] = 0
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 9
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 1
 *[1] = 2
@@ -179,11 +197,11 @@ data [0x55ce21865490]
 *[9] = 0
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 10
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 1
 *[1] = 2
@@ -198,10 +216,10 @@ data [0x55ce21865490]
 }
 
 stack_resize() at stack.cpp(41)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 10
 cappacity = 10
-data [0x55ce21865490]
+data [0x56176f01e490]
 {
 *[0] = 1
 *[1] = 2
@@ -215,11 +233,11 @@ data [0x55ce21865490]
 *[9] = 10
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 11
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -232,22 +250,22 @@ data [0x55ce21866500]
 *[8] = 9
 *[9] = 10
 *[10] = 11
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 12
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -261,21 +279,21 @@ data [0x55ce21866500]
 *[9] = 10
 *[10] = 11
 *[11] = 12
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 13
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -290,20 +308,20 @@ data [0x55ce21866500]
 *[10] = 11
 *[11] = 12
 *[12] = 13
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 14
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -319,19 +337,19 @@ data [0x55ce21866500]
 *[11] = 12
 *[12] = 13
 *[13] = 14
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 15
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -348,18 +366,18 @@ data [0x55ce21866500]
 *[12] = 13
 *[13] = 14
 *[14] = 15
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 16
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -377,17 +395,17 @@ data [0x55ce21866500]
 *[13] = 14
 *[14] = 15
 *[15] = 16
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 17
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -406,16 +424,16 @@ data [0x55ce21866500]
 *[14] = 15
 *[15] = 16
 *[16] = 17
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 18
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -435,15 +453,15 @@ data [0x55ce21866500]
 *[15] = 16
 *[16] = 17
 *[17] = 18
-*[18] = nan
-*[19] = nan
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 19
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -464,14 +482,14 @@ data [0x55ce21866500]
 *[16] = 17
 *[17] = 18
 *[18] = 19
-*[19] = nan
+*[19] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 20
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -496,10 +514,10 @@ data [0x55ce21866500]
 }
 
 stack_resize() at stack.cpp(41)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 20
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -523,11 +541,11 @@ data [0x55ce21866500]
 *[19] = 20
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 21
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -550,32 +568,32 @@ data [0x55ce21866500]
 *[18] = 19
 *[19] = 20
 *[20] = 21
-*[21] = nan
-*[22] = nan
-*[23] = nan
-*[24] = nan
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[21] = nan (POIZON)
+*[22] = nan (POIZON)
+*[23] = nan (POIZON)
+*[24] = nan (POIZON)
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 22
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -599,31 +617,31 @@ data [0x55ce21866500]
 *[19] = 20
 *[20] = 21
 *[21] = 22
-*[22] = nan
-*[23] = nan
-*[24] = nan
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[22] = nan (POIZON)
+*[23] = nan (POIZON)
+*[24] = nan (POIZON)
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 23
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -648,30 +666,30 @@ data [0x55ce21866500]
 *[20] = 21
 *[21] = 22
 *[22] = 23
-*[23] = nan
-*[24] = nan
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[23] = nan (POIZON)
+*[24] = nan (POIZON)
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 24
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -697,29 +715,29 @@ data [0x55ce21866500]
 *[21] = 22
 *[22] = 23
 *[23] = 24
-*[24] = nan
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[24] = nan (POIZON)
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 25
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -746,28 +764,28 @@ data [0x55ce21866500]
 *[22] = 23
 *[23] = 24
 *[24] = 25
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 26
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -795,27 +813,27 @@ data [0x55ce21866500]
 *[23] = 24
 *[24] = 25
 *[25] = 26
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 27
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -844,26 +862,26 @@ data [0x55ce21866500]
 *[24] = 25
 *[25] = 26
 *[26] = 27
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 28
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -893,25 +911,25 @@ data [0x55ce21866500]
 *[25] = 26
 *[26] = 27
 *[27] = 28
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 29
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -942,24 +960,24 @@ data [0x55ce21866500]
 *[26] = 27
 *[27] = 28
 *[28] = 29
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 30
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -991,23 +1009,23 @@ data [0x55ce21866500]
 *[27] = 28
 *[28] = 29
 *[29] = 30
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 31
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1040,22 +1058,22 @@ data [0x55ce21866500]
 *[28] = 29
 *[29] = 30
 *[30] = 31
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 32
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1089,21 +1107,21 @@ data [0x55ce21866500]
 *[29] = 30
 *[30] = 31
 *[31] = 32
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 33
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1138,20 +1156,20 @@ data [0x55ce21866500]
 *[30] = 31
 *[31] = 32
 *[32] = 33
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 34
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1187,19 +1205,19 @@ data [0x55ce21866500]
 *[31] = 32
 *[32] = 33
 *[33] = 34
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 35
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1236,18 +1254,18 @@ data [0x55ce21866500]
 *[32] = 33
 *[33] = 34
 *[34] = 35
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 36
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1285,17 +1303,17 @@ data [0x55ce21866500]
 *[33] = 34
 *[34] = 35
 *[35] = 36
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 37
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1334,16 +1352,16 @@ data [0x55ce21866500]
 *[34] = 35
 *[35] = 36
 *[36] = 37
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 38
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1383,15 +1401,15 @@ data [0x55ce21866500]
 *[35] = 36
 *[36] = 37
 *[37] = 38
-*[38] = nan
-*[39] = nan
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
-stack_push() at stack.cpp(30)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_push() at stack.cpp(29)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 39
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1432,14 +1450,14 @@ data [0x55ce21866500]
 *[36] = 37
 *[37] = 38
 *[38] = 39
-*[39] = nan
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 40
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1484,10 +1502,10 @@ data [0x55ce21866500]
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 39
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1528,14 +1546,14 @@ data [0x55ce21866500]
 *[36] = 37
 *[37] = 38
 *[38] = 39
-*[39] = nan
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 38
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1575,15 +1593,15 @@ data [0x55ce21866500]
 *[35] = 36
 *[36] = 37
 *[37] = 38
-*[38] = nan
-*[39] = nan
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 37
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1622,16 +1640,16 @@ data [0x55ce21866500]
 *[34] = 35
 *[35] = 36
 *[36] = 37
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 36
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1669,17 +1687,17 @@ data [0x55ce21866500]
 *[33] = 34
 *[34] = 35
 *[35] = 36
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 35
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1716,18 +1734,18 @@ data [0x55ce21866500]
 *[32] = 33
 *[33] = 34
 *[34] = 35
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 34
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1763,19 +1781,19 @@ data [0x55ce21866500]
 *[31] = 32
 *[32] = 33
 *[33] = 34
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 33
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1810,20 +1828,20 @@ data [0x55ce21866500]
 *[30] = 31
 *[31] = 32
 *[32] = 33
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 32
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1857,21 +1875,21 @@ data [0x55ce21866500]
 *[29] = 30
 *[30] = 31
 *[31] = 32
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 31
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1904,22 +1922,22 @@ data [0x55ce21866500]
 *[28] = 29
 *[29] = 30
 *[30] = 31
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 30
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1951,23 +1969,23 @@ data [0x55ce21866500]
 *[27] = 28
 *[28] = 29
 *[29] = 30
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 29
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -1998,24 +2016,24 @@ data [0x55ce21866500]
 *[26] = 27
 *[27] = 28
 *[28] = 29
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 28
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2045,25 +2063,25 @@ data [0x55ce21866500]
 *[25] = 26
 *[26] = 27
 *[27] = 28
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 27
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2092,26 +2110,26 @@ data [0x55ce21866500]
 *[24] = 25
 *[25] = 26
 *[26] = 27
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 26
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2139,27 +2157,27 @@ data [0x55ce21866500]
 *[23] = 24
 *[24] = 25
 *[25] = 26
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 25
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2186,28 +2204,28 @@ data [0x55ce21866500]
 *[22] = 23
 *[23] = 24
 *[24] = 25
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 24
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2233,29 +2251,29 @@ data [0x55ce21866500]
 *[21] = 22
 *[22] = 23
 *[23] = 24
-*[24] = nan
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[24] = nan (POIZON)
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 23
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2280,30 +2298,30 @@ data [0x55ce21866500]
 *[20] = 21
 *[21] = 22
 *[22] = 23
-*[23] = nan
-*[24] = nan
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[23] = nan (POIZON)
+*[24] = nan (POIZON)
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 22
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2327,31 +2345,31 @@ data [0x55ce21866500]
 *[19] = 20
 *[20] = 21
 *[21] = 22
-*[22] = nan
-*[23] = nan
-*[24] = nan
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[22] = nan (POIZON)
+*[23] = nan (POIZON)
+*[24] = nan (POIZON)
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 21
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2374,32 +2392,32 @@ data [0x55ce21866500]
 *[18] = 19
 *[19] = 20
 *[20] = 21
-*[21] = nan
-*[22] = nan
-*[23] = nan
-*[24] = nan
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[21] = nan (POIZON)
+*[22] = nan (POIZON)
+*[23] = nan (POIZON)
+*[24] = nan (POIZON)
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 20
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2421,33 +2439,33 @@ data [0x55ce21866500]
 *[17] = 18
 *[18] = 19
 *[19] = 20
-*[20] = nan
-*[21] = nan
-*[22] = nan
-*[23] = nan
-*[24] = nan
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[20] = nan (POIZON)
+*[21] = nan (POIZON)
+*[22] = nan (POIZON)
+*[23] = nan (POIZON)
+*[24] = nan (POIZON)
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_resize() at stack.cpp(41)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 19
 cappacity = 40
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2468,34 +2486,34 @@ data [0x55ce21866500]
 *[16] = 17
 *[17] = 18
 *[18] = 19
-*[19] = nan
-*[20] = nan
-*[21] = nan
-*[22] = nan
-*[23] = nan
-*[24] = nan
-*[25] = nan
-*[26] = nan
-*[27] = nan
-*[28] = nan
-*[29] = nan
-*[30] = nan
-*[31] = nan
-*[32] = nan
-*[33] = nan
-*[34] = nan
-*[35] = nan
-*[36] = nan
-*[37] = nan
-*[38] = nan
-*[39] = nan
+*[19] = nan (POIZON)
+*[20] = nan (POIZON)
+*[21] = nan (POIZON)
+*[22] = nan (POIZON)
+*[23] = nan (POIZON)
+*[24] = nan (POIZON)
+*[25] = nan (POIZON)
+*[26] = nan (POIZON)
+*[27] = nan (POIZON)
+*[28] = nan (POIZON)
+*[29] = nan (POIZON)
+*[30] = nan (POIZON)
+*[31] = nan (POIZON)
+*[32] = nan (POIZON)
+*[33] = nan (POIZON)
+*[34] = nan (POIZON)
+*[35] = nan (POIZON)
+*[36] = nan (POIZON)
+*[37] = nan (POIZON)
+*[38] = nan (POIZON)
+*[39] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 19
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2516,14 +2534,14 @@ data [0x55ce21866500]
 *[16] = 17
 *[17] = 18
 *[18] = 19
-*[19] = nan
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 18
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2543,15 +2561,15 @@ data [0x55ce21866500]
 *[15] = 16
 *[16] = 17
 *[17] = 18
-*[18] = nan
-*[19] = nan
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 17
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2570,16 +2588,16 @@ data [0x55ce21866500]
 *[14] = 15
 *[15] = 16
 *[16] = 17
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 16
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2597,17 +2615,17 @@ data [0x55ce21866500]
 *[13] = 14
 *[14] = 15
 *[15] = 16
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 15
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2624,18 +2642,18 @@ data [0x55ce21866500]
 *[12] = 13
 *[13] = 14
 *[14] = 15
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 14
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2651,19 +2669,19 @@ data [0x55ce21866500]
 *[11] = 12
 *[12] = 13
 *[13] = 14
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 13
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2678,20 +2696,20 @@ data [0x55ce21866500]
 *[10] = 11
 *[11] = 12
 *[12] = 13
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 12
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2705,21 +2723,21 @@ data [0x55ce21866500]
 *[9] = 10
 *[10] = 11
 *[11] = 12
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 11
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2732,22 +2750,22 @@ data [0x55ce21866500]
 *[8] = 9
 *[9] = 10
 *[10] = 11
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 10
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2759,23 +2777,23 @@ data [0x55ce21866500]
 *[7] = 8
 *[8] = 9
 *[9] = 10
-*[10] = nan
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[10] = nan (POIZON)
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 9
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2786,24 +2804,24 @@ data [0x55ce21866500]
 *[6] = 7
 *[7] = 8
 *[8] = 9
-*[9] = nan
-*[10] = nan
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[9] = nan (POIZON)
+*[10] = nan (POIZON)
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 8
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2813,25 +2831,25 @@ data [0x55ce21866500]
 *[5] = 6
 *[6] = 7
 *[7] = 8
-*[8] = nan
-*[9] = nan
-*[10] = nan
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[8] = nan (POIZON)
+*[9] = nan (POIZON)
+*[10] = nan (POIZON)
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 7
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2840,26 +2858,26 @@ data [0x55ce21866500]
 *[4] = 5
 *[5] = 6
 *[6] = 7
-*[7] = nan
-*[8] = nan
-*[9] = nan
-*[10] = nan
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[7] = nan (POIZON)
+*[8] = nan (POIZON)
+*[9] = nan (POIZON)
+*[10] = nan (POIZON)
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 6
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
@@ -2867,186 +2885,186 @@ data [0x55ce21866500]
 *[3] = 4
 *[4] = 5
 *[5] = 6
-*[6] = nan
-*[7] = nan
-*[8] = nan
-*[9] = nan
-*[10] = nan
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[6] = nan (POIZON)
+*[7] = nan (POIZON)
+*[8] = nan (POIZON)
+*[9] = nan (POIZON)
+*[10] = nan (POIZON)
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 5
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
 *[2] = 3
 *[3] = 4
 *[4] = 5
-*[5] = nan
-*[6] = nan
-*[7] = nan
-*[8] = nan
-*[9] = nan
-*[10] = nan
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[5] = nan (POIZON)
+*[6] = nan (POIZON)
+*[7] = nan (POIZON)
+*[8] = nan (POIZON)
+*[9] = nan (POIZON)
+*[10] = nan (POIZON)
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 4
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
 *[2] = 3
 *[3] = 4
-*[4] = nan
-*[5] = nan
-*[6] = nan
-*[7] = nan
-*[8] = nan
-*[9] = nan
-*[10] = nan
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[4] = nan (POIZON)
+*[5] = nan (POIZON)
+*[6] = nan (POIZON)
+*[7] = nan (POIZON)
+*[8] = nan (POIZON)
+*[9] = nan (POIZON)
+*[10] = nan (POIZON)
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 3
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
 *[2] = 3
-*[3] = nan
-*[4] = nan
-*[5] = nan
-*[6] = nan
-*[7] = nan
-*[8] = nan
-*[9] = nan
-*[10] = nan
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[3] = nan (POIZON)
+*[4] = nan (POIZON)
+*[5] = nan (POIZON)
+*[6] = nan (POIZON)
+*[7] = nan (POIZON)
+*[8] = nan (POIZON)
+*[9] = nan (POIZON)
+*[10] = nan (POIZON)
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 2
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
 *[1] = 2
-*[2] = nan
-*[3] = nan
-*[4] = nan
-*[5] = nan
-*[6] = nan
-*[7] = nan
-*[8] = nan
-*[9] = nan
-*[10] = nan
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[2] = nan (POIZON)
+*[3] = nan (POIZON)
+*[4] = nan (POIZON)
+*[5] = nan (POIZON)
+*[6] = nan (POIZON)
+*[7] = nan (POIZON)
+*[8] = nan (POIZON)
+*[9] = nan (POIZON)
+*[10] = nan (POIZON)
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
 stack_pop() at stack.cpp(58)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 1
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
 *[0] = 1
-*[1] = nan
-*[2] = nan
-*[3] = nan
-*[4] = nan
-*[5] = nan
-*[6] = nan
-*[7] = nan
-*[8] = nan
-*[9] = nan
-*[10] = nan
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[1] = nan (POIZON)
+*[2] = nan (POIZON)
+*[3] = nan (POIZON)
+*[4] = nan (POIZON)
+*[5] = nan (POIZON)
+*[6] = nan (POIZON)
+*[7] = nan (POIZON)
+*[8] = nan (POIZON)
+*[9] = nan (POIZON)
+*[10] = nan (POIZON)
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }
 
-stack_dtor() at stack.cpp(19)
-Stack[0x7ffe4b910240] (ok) "stk1" at main() at main.cpp(29) 
+stack_dtor() at stack.cpp(17)
+Stack[(nil)] (ok) "stk1" at main() at main.cpp(30) 
 size = 0
 cappacity = 20
-data [0x55ce21866500]
+data [0x56176f01f500]
 {
-*[0] = nan
-*[1] = nan
-*[2] = nan
-*[3] = nan
-*[4] = nan
-*[5] = nan
-*[6] = nan
-*[7] = nan
-*[8] = nan
-*[9] = nan
-*[10] = nan
-*[11] = nan
-*[12] = nan
-*[13] = nan
-*[14] = nan
-*[15] = nan
-*[16] = nan
-*[17] = nan
-*[18] = nan
-*[19] = nan
+*[0] = nan (POIZON)
+*[1] = nan (POIZON)
+*[2] = nan (POIZON)
+*[3] = nan (POIZON)
+*[4] = nan (POIZON)
+*[5] = nan (POIZON)
+*[6] = nan (POIZON)
+*[7] = nan (POIZON)
+*[8] = nan (POIZON)
+*[9] = nan (POIZON)
+*[10] = nan (POIZON)
+*[11] = nan (POIZON)
+*[12] = nan (POIZON)
+*[13] = nan (POIZON)
+*[14] = nan (POIZON)
+*[15] = nan (POIZON)
+*[16] = nan (POIZON)
+*[17] = nan (POIZON)
+*[18] = nan (POIZON)
+*[19] = nan (POIZON)
 }

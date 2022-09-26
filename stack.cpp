@@ -3,10 +3,8 @@
 #include "utils.hpp"
 #include <math.h>
 
-// extern FILE *log = fopen("/mnt/c/Users/User/Desktop/programs/stack/log.txt", "w");
 
-
-void stack_ctor(stack *stk, size_t capacity) {
+void stack_ctor_(stack *stk, size_t capacity) {
 
     stk->capacity = capacity;
     stk->data = (elem_stk_t *) calloc(capacity + 1, sizeof(elem_stk_t));
@@ -17,6 +15,7 @@ void stack_ctor(stack *stk, size_t capacity) {
 
 void stack_dtor(stack *stk) {
     ASSERT(stk);
+
     to_dump(stk, logs_);
     free(stk->data);
     stk->data = nullptr;
@@ -28,6 +27,7 @@ void stack_dtor(stack *stk) {
 
 void stack_push(stack *stk, double elem) {
     ASSERT(stk);
+
     to_dump(stk, logs_);
 
     if (stk->size >= stk->capacity) stack_resize(stk);
@@ -39,13 +39,13 @@ void stack_push(stack *stk, double elem) {
 
 void stack_resize(stack *stk) {
     ASSERT(stk);
+
     to_dump(stk, logs_);
 
-
     if (stk->capacity == stk->size) {
-        stk->capacity *= multiple;
-    } else if (stk->size + 1 == stk->capacity/multiple) {
-        stk->capacity /= multiple; 
+        stk->capacity *= MULTIPLE;
+    } else if (stk->size + 1 == stk->capacity/MULTIPLE) {
+        stk->capacity /= MULTIPLE; 
     }
     stk->data = (elem_stk_t *)realloc(stk->data, stk->capacity*sizeof(elem_stk_t));
     for (long unsigned i = stk->size; i < stk->capacity; i++)
@@ -56,13 +56,14 @@ void stack_resize(stack *stk) {
 
 void stack_pop(stack *stk, elem_stk_t *value) {
     ASSERT(stk);
+
     to_dump(stk, logs_);
 
 
     *value = stk->data[stk->size];
     stk->size--;
     stk->data[stk->size] = NAN;
-    if (stk->size + 1 == stk->capacity/2 && stk->size >= 10) stack_resize(stk);
+    if (stk->size + 1 == stk->capacity/MULTIPLE && stk->size >= 10) stack_resize(stk);
 
     ASSERT(stk);
 }
