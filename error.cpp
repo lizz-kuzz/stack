@@ -3,7 +3,6 @@
 
 #if DEBUG == 2 || DEBUG == 3 || DEBUG == 4
 void to_dump(stack *stk, FILE *log) {  
-    // как сделать макросом?
     assert(log != nullptr && "coudn't open file");
 
     fprintf(log, "\n%s() at %s(%d)\n", stk->info.FUNC_CALL, stk->info.NAME_FILE_CALL, stk->info.LINE_CALL);
