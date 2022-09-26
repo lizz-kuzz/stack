@@ -8,6 +8,10 @@
 
 #define MULTIPLE 2
 
+#define CANARIES_LEFT  0xDEADF00D
+#define CANARIES_RIGHT 0xDEADBABE
+
+
 #define DEBUG 4 //с чиселками работает а не с чиселками нет 
 
 typedef double elem_stk_t;
@@ -63,12 +67,14 @@ typedef struct {
 } stack;
 
 enum ERRORS {
-    NULL_POINT_DATE           = 1,
-    SIZE_MORE_THAN_CAPACITY   = 2,
-    SIZE_OR_CAPACITY_NEGATIVE = 3, 
-    ERROR_HASH = 4,
-    ERROR_CANARIES = 5,
-    ERROR_CANARIES_HASH = 6,
+    NULL_POINT_TO_STACK       = 1,
+    NULL_POINT_DATE           = 2,
+    SIZE_MORE_THAN_CAPACITY   = 3,
+    SIZE_OR_CAPACITY_NEGATIVE = 4, 
+    ERROR_HASH                = 5,
+    ERROR_CANARIES            = 6,
+    ERROR_CANARIES_HASH       = 7,
+    // канарейки в data
 };
 
 

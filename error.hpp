@@ -8,8 +8,9 @@
                     assert_ok(stk);
 
 
-void to_dump  (stack *stk, FILE *log);
-void assert_ok(stack *stk);
+void to_dump      (stack *stk, FILE *log);
+void printf_errors(stack *stk, FILE *log);
+void assert_ok    (stack *stk);
 extern FILE *logs_;
 
 #endif

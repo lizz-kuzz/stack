@@ -31,14 +31,12 @@ int main() {
     to_dump(&stk1, logs_);
     for (int i = 1; i <= 40; i++) {
         stack_push(&stk1, i);
-        // to_dump(&stk1, logs_);
     }
 
     elem_stk_t value = 0;
 
     for (int i = 40; i > 0; i--) {
         stack_pop(&stk1, &value);
-        // to_dump(&stk1, logs_);
     }
     stack_dtor(&stk1);
 
