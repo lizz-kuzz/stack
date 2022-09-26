@@ -6,13 +6,14 @@
 #include <assert.h>
 #include <math.h>
 
+#define DEBUG 4 //с чиселками работает а не с чиселками нет 
 #define MULTIPLE 2
 
-#define CANARIES_LEFT  0xDEADF00D
-#define CANARIES_RIGHT 0xDEADBABE
+#if DEBUG == 4 || DEBUG == 2
+    #define CANARIES_LEFT  0xDEADF00D
+    #define CANARIES_RIGHT 0xDEADBABE
+#endif
 
-
-#define DEBUG 4 //с чиселками работает а не с чиселками нет 
 
 typedef double elem_stk_t;
 

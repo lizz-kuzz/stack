@@ -5,10 +5,22 @@
 
 
 void stack_ctor_(stack *stk, size_t capacity) {
+    ASSERT(stk)
 
     stk->capacity = capacity;
     stk->data = (elem_stk_t *) calloc(capacity + 1, sizeof(elem_stk_t));
+    for (unsigned i = 0; i < stk->capacity; i++) {
+        stk->data[i] = NAN;
+    }
     stk->size = 0;
+    #if DEBUG != 1
+        stk->info.number_of_error = 0;
+    #endif
+    #if DEBUG == 4 || DEBUG == 2
+        stk->canaries_left = CANARIES_LEFT;
+        stk->canaries_right = CANARIES_RIGHT;
+    #endif
+
     ASSERT(stk);
 
 }
