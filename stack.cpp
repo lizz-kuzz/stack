@@ -16,6 +16,15 @@ void stack_ctor_(stack *stk, size_t capacity) {
         stk->canaries_left  = CANARIES_LEFT;
         stk->canaries_right = CANARIES_RIGHT;
     #endif
+    #if MODE == 4 || MODE == 3
+        if (stk->hash_stk == 0) {
+            stk->hash_stk = hash_stack(stk, sizeof(*stk));
+        }
+        if (stk->hash_data == 0) {
+            stk->hash_data = hash_data(stk->data, sizeof(*stk->data));
+        }
+    #endif
+
     #if MODE != 1
         ASSERT(stk);
     #endif
@@ -59,14 +68,13 @@ void stack_resize(stack *stk) {
         ASSERT(stk);
     #endif
 
-    to_dump(stk, logs_);
-
     if (stk->capacity == stk->size) {
         stk->capacity *= MULTIPLE;
     } else if (stk->size + 1 == stk->capacity/MULTIPLE) {
         stk->capacity /= MULTIPLE; 
     }
     stk->data = (elem_stk_t *)realloc(stk->data, stk->capacity*sizeof(elem_stk_t));
+    // свой реалок для канареек
     for (long unsigned i = stk->size; i < stk->capacity; i++)
         stk->data[i] = NAN;
 

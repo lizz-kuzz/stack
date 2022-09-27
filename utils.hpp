@@ -45,14 +45,16 @@ typedef struct {
         size_t             size;
         size_t             capacity;
         stack_info         info;
-        unsigned long long hash;
+        unsigned long long hash_stk;
+        unsigned long long hash_data;
         unsigned long long canaries_right;
     #elif MODE == 3
         elem_stk_t         *data;
         size_t             size;
         size_t             capacity;
         stack_info         info;
-        unsigned long long hash;
+        unsigned long long hash_stk;
+        unsigned long long hash_data;
     #elif MODE == 2
         unsigned long long canaries_left;
         elem_stk_t         *data;
@@ -72,9 +74,10 @@ enum ERRORS {
     NULL_POINT_DATE           = 2,
     SIZE_MORE_THAN_CAPACITY   = 3,
     SIZE_OR_CAPACITY_NEGATIVE = 4, 
-    ERROR_HASH                = 5,
-    ERROR_CANARIES            = 6,
-    ERROR_CANARIES_HASH       = 7,
+    ERROR_HASH_STK            = 5,
+    ERROR_HASH_DATA           = 6,
+    ERROR_CANARIES            = 7,
+    ERROR_CANARIES_HASH       = 8,
     // канарейки в data
 };
 

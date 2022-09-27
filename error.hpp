@@ -16,4 +16,7 @@ void printf_errors(stack *stk, FILE *log);
 void assert_ok    (stack *stk);
 extern FILE *logs_;
 
+unsigned long long hash_stack(void *stk, size_t SIZE);
+unsigned long long hash_data (void *data, size_t SIZE);
+
 #endif

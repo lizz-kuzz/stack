@@ -2,7 +2,6 @@
 #define STACK_HPP_INCLUDED
 
 #include "utils.hpp"
-// добавить условие 
 #if MODE != 1
     #define stack_ctor(stk, num) stk.info.FUNC       = __FUNCTION__; \
                                  stk.info.LINE       = __LINE__;     \
@@ -11,14 +10,14 @@
                                  stack_ctor_(&stk, num);
 #endif
 
-void stack_ctor_(stack *stk, size_t capasity);
+void stack_ctor_  (stack *stk, size_t capasity);
 
-void stack_push(stack *stk, double elem);
+void stack_push   (stack *stk, double elem);
 
-void stack_dtor(stack *stk);
+void stack_dtor   (stack *stk);
 
-void stack_resize(stack *stk);
+void stack_resize (stack *stk);
 
-void stack_pop(stack *stk, elem_stk_t *value);
+void stack_pop    (stack *stk, elem_stk_t *value);
 
 #endif
