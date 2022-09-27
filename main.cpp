@@ -5,13 +5,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-
-
 FILE *logs_;
-//  понять что делает # ## этапы компиляции предпроцессор 
-
-// 1 этап условной компиляции вызвать разные структуры для разных модов
-// сделать конструктор расширенный
 
 int main() {
     const char *LOG_FILE = "/mnt/c/Users/User/Desktop/programs/stack/log.txt";
@@ -27,19 +21,18 @@ int main() {
 
     stack stk1 = {};
 
-    stack_ctor(stk1, 10);
-    to_dump(&stk1, logs_);
-    for (int i = 1; i <= 40; i++) {
+    stack_ctor(stk1, 5);
+    
+    for (int i = 1; i <= 10; i++) {
         stack_push(&stk1, i);
-        // to_dump(&stk1, logs_);
     }
 
     elem_stk_t value = 0;
 
-    for (int i = 40; i > 0; i--) {
-        stack_pop(&stk1, &value);
-        // to_dump(&stk1, logs_);
-    }
+    // for (int i = 40; i > 0; i--) {
+    //     stack_pop(&stk1, &value);
+    // }
+
     stack_dtor(&stk1);
 
     fclose(logs_);

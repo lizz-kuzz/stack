@@ -6,9 +6,14 @@
 #include <assert.h>
 #include <math.h>
 
+#define MODE 4 //с чиселками работает а не с чиселками нет 
 #define MULTIPLE 2
 
-#define DEBUG 4 //с чиселками работает а не с чиселками нет 
+#if MODE == 4 || MODE == 2
+    #define CANARIES_LEFT  0xDEADF00D
+    #define CANARIES_RIGHT 0xDEADBABE
+#endif
+
 
 typedef double elem_stk_t;
 
@@ -34,28 +39,30 @@ enum DEBUG_ {
 };
 
 typedef struct {
-    #if DEBUG == 4
+    #if MODE == 4
         unsigned long long canaries_left;
         elem_stk_t         *data;
         size_t             size;
         size_t             capacity;
         stack_info         info;
-        unsigned long long hash;
+        unsigned long long hash_stk;
+        unsigned long long hash_data;
         unsigned long long canaries_right;
-    #elif DEBUG == 3
+    #elif MODE == 3
         elem_stk_t         *data;
         size_t             size;
         size_t             capacity;
         stack_info         info;
-        unsigned long long hash;
-    #elif DEBUG == 2
+        unsigned long long hash_stk;
+        unsigned long long hash_data;
+    #elif MODE == 2
         unsigned long long canaries_left;
         elem_stk_t         *data;
         size_t             size;
         size_t             capacity;
         stack_info         info;
         unsigned long long canaries_right;
-    #elif DEBUG == 1
+    #elif MODE == 1
         elem_stk_t         *data;
         size_t             size;
         size_t             capacity;
@@ -63,12 +70,15 @@ typedef struct {
 } stack;
 
 enum ERRORS {
-    NULL_POINT_DATE           = 1,
-    SIZE_MORE_THAN_CAPACITY   = 2,
-    SIZE_OR_CAPACITY_NEGATIVE = 3, 
-    ERROR_HASH = 4,
-    ERROR_CANARIES = 5,
-    ERROR_CANARIES_HASH = 6,
+    NULL_POINT_TO_STACK       = 1,
+    NULL_POINT_DATE           = 2,
+    SIZE_MORE_THAN_CAPACITY   = 3,
+    SIZE_OR_CAPACITY_NEGATIVE = 4, 
+    ERROR_HASH_STK            = 5,
+    ERROR_HASH_DATA           = 6,
+    ERROR_CANARIES            = 7,
+    ERROR_CANARIES_HASH       = 8,
+    // канарейки в data
 };
 
 
