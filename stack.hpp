@@ -12,6 +12,8 @@
 
 void stack_ctor_  (stack *stk, size_t capasity);
 
+void create_data(stack *stk);
+
 void stack_push   (stack *stk, double elem);
 
 void stack_dtor   (stack *stk);

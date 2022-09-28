@@ -6,7 +6,7 @@
 #include <assert.h>
 #include <math.h>
 
-#define MODE 4 //с чиселками работает а не с чиселками нет 
+#define MODE 4 //с чиселками работает а enum нет 
 #define MULTIPLE 2
 
 #if MODE == 4 || MODE == 2
@@ -20,7 +20,7 @@ typedef double elem_stk_t;
 
 typedef struct {
     long int   number_of_error; //ошибки
-    // инфа о созданном стеке
+// инфа о созданном стеке
     int        LINE;
     const char *FUNC; 
     const char *NAME_FILE;
@@ -73,12 +73,11 @@ enum ERRORS {
     NULL_POINT_TO_STACK       = 1,
     NULL_POINT_DATE           = 2,
     SIZE_MORE_THAN_CAPACITY   = 3,
-    SIZE_OR_CAPACITY_NEGATIVE = 4, 
+    SIZE_OR_CAPACITY_NEGATIVE = 4,
     ERROR_HASH_STK            = 5,
     ERROR_HASH_DATA           = 6,
-    ERROR_CANARIES            = 7,
-    ERROR_CANARIES_HASH       = 8,
-    // канарейки в data
+    ERROR_CANARIES_STK        = 7,
+    ERROR_CANARIES_DATA       = 8,
 };
 
 
