@@ -2,9 +2,6 @@
 #include "stack.hpp"
 #include "error.hpp"
 
-#include <stdio.h>
-#include <assert.h>
-
 FILE *logs_;
 
 int main() {

@@ -44,30 +44,31 @@ void printf_errors(stack *stk, FILE *log) {
     if (stk->info.number_of_error >> SIZE_OR_CAPACITY_NEGATIVE & 1) {
         fprintf(log, "(ERROR!!!) \"%s\" at %s() at %s(%d) \n", stk->info.NAME_STACK, stk->info.FUNC, stk->info.NAME_FILE, stk->info.LINE);
         fprintf(log, "SIZE OR CAPACITY NEGATIVE\n");  
-    }  
-#if MODE != 2
-    if (stk->info.number_of_error >> ERROR_HASH_STK & 1) {
-        fprintf(log, "(ERROR!!!) \"%s\" at %s() at %s(%d) \n", stk->info.NAME_STACK, stk->info.FUNC, stk->info.NAME_FILE, stk->info.LINE);
-        fprintf(log, "ERROR_HASH\n"); 
-        fprintf(log, "HASH_STK %llu\n", stk->hash_stk); 
-    }
-    if (stk->info.number_of_error >> ERROR_HASH_DATA & 1) {
-        fprintf(log, "(ERROR!!!) \"%s\" at %s() at %s(%d) \n", stk->info.NAME_STACK, stk->info.FUNC, stk->info.NAME_FILE, stk->info.LINE);
-        fprintf(log, "ERROR_HASH\n"); 
-        fprintf(log, "HASH_DATA %llu\n", stk->hash_data);
-    }
-#endif
-#if MODE == 2 || MODE == 4
-    if (stk->info.number_of_error >> ERROR_CANARIES_STK & 1) {
-        fprintf(log, "(ERROR!!!) \"%s\" at %s() at %s(%d) \n", stk->info.NAME_STACK, stk->info.FUNC, stk->info.NAME_FILE, stk->info.LINE);
-        fprintf(log, "ERROR CANARIES IN STACK\n");
-    }
+    } 
 
-    if (stk->info.number_of_error >> ERROR_CANARIES_DATA & 1) {
-        fprintf(log, "(ERROR!!!) \"%s\" at %s() at %s(%d) \n", stk->info.NAME_STACK, stk->info.FUNC, stk->info.NAME_FILE, stk->info.LINE);
-        fprintf(log, "ERROR CANARIES IN DATA\n");
-    }
-#endif
+    #if MODE != 2
+        if (stk->info.number_of_error >> ERROR_HASH_STK & 1) {
+            fprintf(log, "(ERROR!!!) \"%s\" at %s() at %s(%d) \n", stk->info.NAME_STACK, stk->info.FUNC, stk->info.NAME_FILE, stk->info.LINE);
+            fprintf(log, "ERROR_HASH\n"); 
+            fprintf(log, "HASH_STK %llu\n", stk->hash_stk); 
+        }
+        if (stk->info.number_of_error >> ERROR_HASH_DATA & 1) {
+            fprintf(log, "(ERROR!!!) \"%s\" at %s() at %s(%d) \n", stk->info.NAME_STACK, stk->info.FUNC, stk->info.NAME_FILE, stk->info.LINE);
+            fprintf(log, "ERROR_HASH\n"); 
+            fprintf(log, "HASH_DATA %llu\n", stk->hash_data);
+        }
+    #endif
+    #if MODE == 2 || MODE == 4
+        if (stk->info.number_of_error >> ERROR_CANARIES_STK & 1) {
+            fprintf(log, "(ERROR!!!) \"%s\" at %s() at %s(%d) \n", stk->info.NAME_STACK, stk->info.FUNC, stk->info.NAME_FILE, stk->info.LINE);
+            fprintf(log, "ERROR CANARIES IN STACK\n");
+        }
+
+        if (stk->info.number_of_error >> ERROR_CANARIES_DATA & 1) {
+            fprintf(log, "(ERROR!!!) \"%s\" at %s() at %s(%d) \n", stk->info.NAME_STACK, stk->info.FUNC, stk->info.NAME_FILE, stk->info.LINE);
+            fprintf(log, "ERROR CANARIES IN DATA\n");
+        }
+    #endif
 }
 #endif
 
@@ -78,7 +79,6 @@ void assert_ok(stack *stk) {
     for (int i = 0; i < 9; i++) {
         arr_degree_two[i] = pow(2, i);
     }
-
 
     #if MODE == 4
         if (stk == nullptr) {

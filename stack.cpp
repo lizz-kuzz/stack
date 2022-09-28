@@ -1,7 +1,6 @@
 #include "stack.hpp"
 #include "error.hpp"
 #include "utils.hpp"
-#include <math.h>
 
 #if MODE == 2 || MODE == 4
     elem_stk_t *create_data(stack *stk) {

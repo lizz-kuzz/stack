@@ -2,6 +2,7 @@
 #define STACK_HPP_INCLUDED
 
 #include "utils.hpp"
+
 #if MODE != 1
     #define stack_ctor(stk, num) stk.info.FUNC       = __FUNCTION__; \
                                  stk.info.LINE       = __LINE__;     \
