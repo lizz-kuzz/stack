@@ -21,17 +21,18 @@ int main() {
 
     stack stk1 = {};
 
-    stack_ctor(stk1, 5);
+
+    stack_ctor(stk1, 10);
     
-    for (int i = 1; i <= 10; i++) {
+    for (int i = 1; i <= 40; i++) {
         stack_push(&stk1, i);
     }
 
     elem_stk_t value = 0;
 
-    // for (int i = 40; i > 0; i--) {
-    //     stack_pop(&stk1, &value);
-    // }
+    for (int i = 40; i > 0; i--) {
+        stack_pop(&stk1, &value);
+    }
 
     stack_dtor(&stk1);
 

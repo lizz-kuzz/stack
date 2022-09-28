@@ -4,6 +4,17 @@
 #include <math.h>
 
 
+// void create_data(stack *stk) {
+//     stk->data = (elem_stk_t *) calloc(stk->capacity + 2, sizeof(elem_stk_t));
+//     // stk->data[0] = CANARIES_LEFT;
+//     // stk->data[stk->capacity] = CANARIES_RIGHT;
+//     for (unsigned i = 0; i < stk->capacity; i++) {
+//         stk->data[i] = NAN;
+//     }
+//     stk->size = 0;
+//     ASSERT(stk);
+//     // return 
+// }
 void stack_ctor_(stack *stk, size_t capacity) {
     stk->capacity = capacity;
     stk->data = (elem_stk_t *) calloc(capacity + 1, sizeof(elem_stk_t));
@@ -27,10 +38,9 @@ void stack_ctor_(stack *stk, size_t capacity) {
 
     #if MODE != 1
         ASSERT(stk);
-    #endif
-
-    
+    #endif    
 }
+
 
 void stack_dtor(stack *stk) {
     #if MODE != 1
@@ -67,6 +77,7 @@ void stack_resize(stack *stk) {
     #if MODE != 1
         ASSERT(stk);
     #endif
+    // stk->data[stk->capacity] = NAN;
 
     if (stk->capacity == stk->size) {
         stk->capacity *= MULTIPLE;
@@ -74,10 +85,19 @@ void stack_resize(stack *stk) {
         stk->capacity /= MULTIPLE; 
     }
     stk->data = (elem_stk_t *)realloc(stk->data, stk->capacity*sizeof(elem_stk_t));
-    // свой реалок для канареек
+    // stk->data[0] = (unsigned long long ) calloc(1, sizeof(unsigned long long));
+    // stk->data[0] = CANARIES_LEFT;
+    // stk->data[stk->capacity-1] = (unsigned long long ) calloc(1, sizeof(unsigned long long));
+    // stk->data[stk->capacity-1] = CANARIES_RIGHT;
+
     for (long unsigned i = stk->size; i < stk->capacity; i++)
         stk->data[i] = NAN;
+    // stk->hash_data = hash_data(stk->data, sizeof(stk));
+    stk->hash_data = hash_data(stk->data, sizeof(stk->data));
 
+    fprintf(logs_, "HASH_DATA %llu\n", stk->hash_data);
+
+        
     #if MODE != 1
         ASSERT(stk);
     #endif

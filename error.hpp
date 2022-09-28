@@ -4,7 +4,7 @@
 #include "utils.hpp"
 #if MODE != 1
     #define ASSERT(stk) stk->info.FUNC_CALL      = __FUNCTION__; \
-                        stk->info.LINE_CALL      =  __LINE__;    \
+                        stk->info.LINE_CALL      = __LINE__;     \
                         stk->info.NAME_FILE_CALL = __FILE__;     \
                         assert_ok(stk);                          \
                         to_dump(stk, logs_);                        
