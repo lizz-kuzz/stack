@@ -8,11 +8,15 @@
                                  stk.info.NAME_FILE  = __FILE__;     \
                                  stk.info.NAME_STACK = #stk;         \
                                  stack_ctor_(&stk, num);
+#else 
+    #define stack_ctor(stk, num) stack_ctor_(&stk, num);
 #endif
 
-void stack_ctor_  (stack *stk, size_t capasity);
+elem_stk_t *create_data         (stack *stk);
 
-void create_data(stack *stk);
+elem_stk_t *stack_realloc_canari(stack *stk);
+
+void stack_ctor_  (stack *stk, size_t capasity);
 
 void stack_push   (stack *stk, double elem);
 

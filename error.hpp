@@ -10,7 +10,6 @@
                         to_dump(stk, logs_);                        
 #endif
 
-
 void to_dump      (stack *stk, FILE *log);
 void printf_errors(stack *stk, FILE *log);
 void assert_ok    (stack *stk);

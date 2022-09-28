@@ -31,7 +31,7 @@ typedef struct {
     const char *NAME_FILE_CALL;
 } stack_info;
 
-enum DEBUG_ {
+enum DEBUG_MODE {
     RELIZE = 1,
     DEBUG_CANARIES = 2,
     DEBUG_HASH = 3,
