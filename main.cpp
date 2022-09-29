@@ -1,6 +1,6 @@
 #include "utils.hpp"
 #include "stack.hpp"
-#include "error.hpp"
+#include "debug.hpp"
 
 FILE *logs_;
 

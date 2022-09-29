@@ -1,5 +1,5 @@
 #include "stack.hpp"
-#include "error.hpp"
+#include "debug.hpp"
 #include "utils.hpp"
 
 #if MODE == 2 || MODE == 4

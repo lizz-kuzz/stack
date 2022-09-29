@@ -1,4 +1,4 @@
-#include "error.hpp"
+#include "debug.hpp"
 
 
 #if MODE == 2 || MODE == 3 || MODE == 4
