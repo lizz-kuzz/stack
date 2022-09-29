@@ -1,7 +1,6 @@
 #include "stack.hpp"
-#include "error.hpp"
+#include "debug.hpp"
 #include "utils.hpp"
-#include <math.h>
 
 #if MODE == 2 || MODE == 4
     elem_stk_t *create_data(stack *stk) {
@@ -52,24 +51,25 @@ void stack_ctor_(stack *stk, size_t capacity) {
 
 
 void stack_dtor(stack *stk) {
+
     #if MODE != 1
         ASSERT(stk);
     #endif
+
     #if MODE == 2 || MODE == 4
         stk->data--;
     #endif
+
     free(stk->data);
+
     stk->data = nullptr;
     stk->capacity = -1;
     stk->size = -1;
 
-    // #if MODE != 1
-    //     ASSERT(stk);
-    // #endif
-    
 }
 
 void stack_push(stack *stk, double elem) {
+
     #if MODE != 1
         ASSERT(stk);
     #endif
@@ -86,15 +86,17 @@ void stack_push(stack *stk, double elem) {
 #if MODE == 2 || MODE == 4
     elem_stk_t *stack_realloc_canari(stack *stk) {
 
-        // ASSERT(stk);
-
         unsigned long long *data = (unsigned long long *)stk->data;
         data--;
-        data = (unsigned long long *) realloc(data, sizeof(unsigned long long) + sizeof(elem_stk_t)*stk->capacity + sizeof(unsigned long long));
+
+        data = (unsigned long long *) realloc(data, sizeof(unsigned long long) + 
+                                                    sizeof(elem_stk_t)*stk->capacity + 
+                                                    sizeof(unsigned long long));
+
         data[0] = CANARIES_LEFT;
         data++;
+
         data[stk->capacity*sizeof(elem_stk_t)/sizeof(unsigned long long)] = CANARIES_RIGHT;
-        data[stk->capacity] = CANARIES_RIGHT;
 
         return (elem_stk_t *)data;
     }
@@ -137,8 +139,10 @@ void stack_pop(stack *stk, elem_stk_t *value) {
 
     *value = stk->data[stk->size];
     stk->size--;
+
     stk->data[stk->size] = NAN;
-    if (stk->size + 1 == stk->capacity/MULTIPLE && stk->size >= 10) stack_resize(stk);
+    if (stk->size + 1 == stk->capacity/MULTIPLE && stk->size >= 10) 
+        stack_resize(stk);
     
     #if MODE != 1
         ASSERT(stk);

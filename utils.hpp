@@ -6,7 +6,7 @@
 #include <assert.h>
 #include <math.h>
 
-#define MODE 4 //с чиселками работает а enum нет 
+#define MODE 4
 #define MULTIPLE 2
 
 #if MODE == 4 || MODE == 2

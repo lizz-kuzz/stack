@@ -1,9 +1,6 @@
 #include "utils.hpp"
 #include "stack.hpp"
-#include "error.hpp"
-
-#include <stdio.h>
-#include <assert.h>
+#include "debug.hpp"
 
 FILE *logs_;
 

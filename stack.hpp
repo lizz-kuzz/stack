@@ -2,6 +2,8 @@
 #define STACK_HPP_INCLUDED
 
 #include "utils.hpp"
+
+
 #if MODE != 1
     #define stack_ctor(stk, num) stk.info.FUNC       = __FUNCTION__; \
                                  stk.info.LINE       = __LINE__;     \
@@ -11,6 +13,7 @@
 #else 
     #define stack_ctor(stk, num) stack_ctor_(&stk, num);
 #endif
+
 
 elem_stk_t *create_data         (stack *stk);
 
