@@ -5,16 +5,6 @@
 FILE *logs_;
 
 int main() {
-    const char *LOG_FILE = "/mnt/c/Users/User/Desktop/programs/stack/log.txt";
-    
-    // const char *LOG_FILE = "C://Users//User//Desktop//programs//stack//log.txt";
-
-    logs_ = fopen(LOG_FILE, "w");
-
-    assert(logs_ != nullptr && "coudn't open file");
-
-    if (logs_ == nullptr)
-        printf("Could not open file.\n");
 
     stack stk1 = {};
 
@@ -30,6 +20,4 @@ int main() {
     }
 
     stack_dtor(&stk1);
-
-    fclose(logs_);
 }
