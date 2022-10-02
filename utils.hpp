@@ -6,67 +6,68 @@
 #include <assert.h>
 #include <math.h>
 
-#define MODE 4
-#define MULTIPLE 2
+#define RELIZE         1
+#define CANARY_ON      2
+#define HASH_ON        3
+#define HASH_CANARY_ON 4
 
-#if MODE == 4 || MODE == 2
+#define MODE HASH_CANARY_ON
+#define MULTIPLE       2
+
+
+#if MODE == HASH_CANARY_ON || MODE == CANARY_ON
     #define CANARIES_LEFT  0xDEADF00D
     #define CANARIES_RIGHT 0xDEADBABE
 #endif
 
+#if MODE == HASH_CANARY_ON || MODE == CANARY_ON
+    #define ON_CANARY(...) __VA_ARGS__
+#else
+    #define ON_CANARY(...)
+#endif
 
-typedef double elem_stk_t;
+#if MODE == HASH_CANARY_ON || MODE == HASH_ON
+    #define ON_HASH(...) __VA_ARGS__
+#else
+    #define ON_HASH(...)
+#endif
+
+
+
+typedef unsigned long long elem_canary_t;
+typedef double             elem_stk_t;
+#define POIZON NAN
+
 
 
 typedef struct {
-    long int   number_of_error; //ошибки
+    long int    number_of_error; //ошибки
 // инфа о созданном стеке
-    int        LINE;
+    int         LINE;
     const char *FUNC; 
     const char *NAME_FILE;
     const char *NAME_STACK;
 // инфа о месте где вызван dump
-    int        LINE_CALL;
+    int         LINE_CALL;
     const char *FUNC_CALL; 
     const char *NAME_FILE_CALL;
 } stack_info;
 
-enum DEBUG_MODE {
-    RELIZE = 1,
-    DEBUG_CANARIES = 2,
-    DEBUG_HASH = 3,
-    DEBUG_HASH_CANARIES = 4,
-};
 
 typedef struct {
-    #if MODE == 4
-        unsigned long long canaries_left;
-        elem_stk_t         *data;
-        size_t             size;
-        size_t             capacity;
-        stack_info         info;
-        unsigned long long hash_stk;
-        unsigned long long hash_data;
-        unsigned long long canaries_right;
-    #elif MODE == 3
-        elem_stk_t         *data;
-        size_t             size;
-        size_t             capacity;
-        stack_info         info;
-        unsigned long long hash_stk;
-        unsigned long long hash_data;
-    #elif MODE == 2
-        unsigned long long canaries_left;
-        elem_stk_t         *data;
-        size_t             size;
-        size_t             capacity;
-        stack_info         info;
-        unsigned long long canaries_right;
-    #elif MODE == 1
-        elem_stk_t         *data;
-        size_t             size;
-        size_t             capacity;
+    ON_CANARY(elem_canary_t canaries_left;)
+
+    #if MODE != RELIZE
+        stack_info      info;
     #endif
+
+    elem_stk_t         *data;
+    size_t              size;
+    size_t              capacity;
+
+    ON_HASH  (unsigned long long hash_stk;)
+    ON_HASH  (unsigned long long hash_data;)
+    ON_CANARY(elem_canary_t canaries_right;)
 } stack;
 
 enum ERRORS {
