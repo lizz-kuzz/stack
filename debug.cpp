@@ -61,7 +61,7 @@ void printf_errors(stack *stk, FILE *log) {
         fprintf(log, "SIZE OR CAPACITY NEGATIVE\n");  
     } 
 
-    #if MODE != 2
+    #if MODE != CANARY_ON
         if (stk->info.number_of_error >> ERROR_HASH_STK & 1) {
             printf_error(stk, log);
             fprintf(log, "ERROR_HASH\n"); 
@@ -91,11 +91,11 @@ void printf_errors(stack *stk, FILE *log) {
 
 void assert_ok(stack *stk) {
 
-    #if MODE != RELIZE
+    #if MODE != RELEASE
         if (stk == nullptr) {
             stk->info.number_of_error = stk->info.number_of_error | (1 << NULL_POINT_TO_STACK);
         }
-/
+
         if (stk->data == nullptr) {
             stk->info.number_of_error = stk->info.number_of_error | (1 << NULL_POINT_DATE);
         } 

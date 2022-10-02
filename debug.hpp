@@ -5,7 +5,7 @@
 
 #define INFO_CALL __FUNCTION__, __LINE__, __FILE__
 
-#if MODE != RELIZE
+#if MODE != RELEASE
     #define ASSERT(stk) assert_ok(stk); to_dump(stk, logs_, INFO_CALL);
 #else 
     #define ASSERT(stk)                     

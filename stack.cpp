@@ -2,6 +2,10 @@
 #include "debug.hpp"
 #include "utils.hpp"
 
+
+static int file_status = FILE_CLOSE;
+FILE *logs_;
+
 #if MODE == CANARY_ON || MODE == HASH_CANARY_ON
     elem_stk_t *create_calloc_data(stack *stk) {
 
@@ -14,39 +18,67 @@
         return (elem_stk_t *)data;
     }
 #endif
-// заполнять ток в дебаге
+
+#if MODE != RELEASE
 void fill_data(stack *stk) {
     *stk;
     for (unsigned i = stk->size; i < stk->capacity; i++) {
             stk->data[i] = POIZON;
     }
 }
-#if MODE != RELIZE
-void stack_ctor_(stack *stk, size_t capacity, const char *func, int line, const char *name_file) {
+#endif
+static void open_file() {
 
     const char *LOG_FILE = "/mnt/c/Users/User/Desktop/programs/stack/log.txt";
-    
     // const char *LOG_FILE = "C://Users//User//Desktop//programs//stack//log.txt";
+    
+    if (file_status == FILE_CLOSE) {
+        logs_ = fopen(LOG_FILE, "w");
+        assert(logs_ != nullptr && "coudn't open file");
 
-    logs_ = fopen(LOG_FILE, "w");
+        if (logs_ == nullptr)
+            printf("Could not open file.\n");
 
-    assert(logs_ != nullptr && "coudn't open file");
+        file_status = 1;
+    } else if (file_status == FILE_CLOSE_ADD){
+        logs_ = fopen(LOG_FILE, "a");
+        assert(logs_ != nullptr && "coudn't open file");
 
-    if (logs_ == nullptr)
-        printf("Could not open file.\n");
+        if (logs_ == nullptr)
+            printf("Could not open file.\n");
 
+        file_status = 1;
+    }
+
+}
+
+#if MODE != RELEASE
+void stack_ctor_(stack *stk, size_t capacity, const char *func, int line, const char *name_file) 
+#else 
+void stack_ctor_(stack *stk, size_t capacity) 
+#endif
+{
+    
+    #if MODE != RELEASE
+    open_file();
+    #endif
+
+    #if MODE != RELEASE
+        stk->info.LINE = line;
+        stk->info.FUNC = func;
+        stk->info.NAME_FILE = name_file; 
+    #endif
     stk->capacity = capacity;
-    stk->info.LINE = line;
-    stk->info.FUNC = func;
-    stk->info.NAME_FILE = name_file; 
+
 
     #if MODE == HASH_CANARY_ON || MODE == CANARY_ON
         stk->data = create_calloc_data(stk);
+        fill_data(stk);
     #else 
         stk->data = (elem_stk_t *) calloc(capacity + 1, sizeof(elem_stk_t));
     #endif
-        stk->size = 0;
-        fill_data(stk);
+    
+    stk->size = 0;
 
     #if MODE == HASH_CANARY_ON || MODE == CANARY_ON
         stk->canaries_left  = CANARIES_LEFT;
@@ -61,20 +93,6 @@ void stack_ctor_(stack *stk, size_t capacity, const char *func, int line, const 
     ASSERT(stk);
   
 }
-#endif
-
-void stack_ctor__(stack *stk, size_t capacity) {
-
-    stk->capacity = capacity;
-
-    stk->data = (elem_stk_t *) calloc(capacity + 1, sizeof(elem_stk_t));
-
-    stk->size = 0;
-    fill_data(stk);
-
-
-}
-
 
 void stack_dtor(stack *stk) {
 
@@ -89,8 +107,12 @@ void stack_dtor(stack *stk) {
     stk->data = nullptr;
     stk->capacity = -1;
     stk->size = -1;
-    #if MODE != RELIZE
-        fclose(logs_);
+
+    #if MODE != RELEASE
+        if (file_status == 1) {
+            fclose(logs_);
+            file_status = 2;
+        }
     #endif
 
 }
@@ -136,13 +158,13 @@ void stack_resize(stack *stk) {
         stk->capacity /= MULTIPLE; 
     }
 
-    #if MODE == RELIZE || MODE == HASH_ON
+    #if MODE == RELEASE || MODE == HASH_ON
         stk->data = (elem_stk_t *) realloc(stk->data, stk->capacity * sizeof(elem_stk_t));
     #else  
         stk->data = stack_realloc_canari(stk);
+        fill_data(stk);
     #endif
 
-    fill_data(stk);
     
     #if MODE == HASH_ON || MODE == HASH_CANARY_ON
         stk->hash_data = hash_data(stk->data, sizeof(*stk->data));

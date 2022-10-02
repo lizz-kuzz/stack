@@ -6,12 +6,12 @@
 #include <assert.h>
 #include <math.h>
 
-#define RELIZE         1
+#define RELEASE        1 
 #define CANARY_ON      2
 #define HASH_ON        3
 #define HASH_CANARY_ON 4
 
-#define MODE HASH_CANARY_ON
+#define MODE           CANARY_ON
 #define MULTIPLE       2
 
 
@@ -32,11 +32,22 @@
     #define ON_HASH(...)
 #endif
 
+#if MODE != RELEASE
+    #define ON_DEBUG_INFO(...) __VA_ARGS__
+#else
+    #define ON_DEBUG_INFO(...)
+#endif
 
 
 typedef unsigned long long elem_canary_t;
 typedef double             elem_stk_t;
 #define POIZON NAN
+
+enum FILE_STATUS {
+    FILE_CLOSE     = 0,
+    FILE_OPEN      = 1,
+    FILE_CLOSE_ADD = 2,
+};
 
 
 
@@ -55,19 +66,16 @@ typedef struct {
 
 
 typedef struct {
-    ON_CANARY(elem_canary_t canaries_left;)
-
-    #if MODE != RELIZE
-        stack_info      info;
-    #endif
+    ON_CANARY     (elem_canary_t canaries_left;)
+    ON_DEBUG_INFO (stack_info info;)
 
     elem_stk_t         *data;
     size_t              size;
     size_t              capacity;
 
-    ON_HASH  (unsigned long long hash_stk;)
-    ON_HASH  (unsigned long long hash_data;)
-    ON_CANARY(elem_canary_t canaries_right;)
+    ON_HASH       (unsigned long long hash_stk;)
+    ON_HASH       (unsigned long long hash_data;)
+    ON_CANARY     (elem_canary_t canaries_right;)
 } stack;
 
 enum ERRORS {
