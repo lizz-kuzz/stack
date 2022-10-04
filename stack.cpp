@@ -87,7 +87,7 @@ void stack_ctor_(stack *stk, size_t capacity)
 
     #if MODE == MODE_HASH_CANARY_ON || MODE == MODE_HASH_ON
         stk->hash_stk = 0;
-        stk->hash_data = count_hash (stk->data, sizeof(*stk->data));
+        stk->hash_data = count_hash (stk->data, stk->capacity*sizeof(*stk->data));
         stk->hash_stk  = update_hash(stk);
     #endif
 
@@ -129,7 +129,7 @@ void stack_push(stack *stk, double elem) {
 
     #if MODE == MODE_HASH_ON || MODE == MODE_HASH_CANARY_ON
         stk->hash_stk = 0;
-        stk->hash_data = count_hash (stk->data, sizeof(*stk->data));
+        stk->hash_data = count_hash (stk->data, stk->capacity*sizeof(*stk->data));
         stk->hash_stk  = update_hash(stk);
     #endif
         
@@ -177,7 +177,7 @@ void stack_resize(stack *stk) {
     
     #if MODE == MODE_HASH_ON || MODE == MODE_HASH_CANARY_ON
         stk->hash_stk = 0;
-        stk->hash_data = count_hash(stk->data, sizeof(*stk->data));
+        stk->hash_data = count_hash (stk->data, stk->capacity*sizeof(*stk->data));
         stk->hash_stk  = update_hash(stk);
     #endif
         
@@ -196,7 +196,7 @@ void stack_pop(stack *stk, elem_stk_t *value) {
     
     #if MODE == MODE_HASH_ON || MODE == MODE_HASH_CANARY_ON
         stk->hash_stk = 0;
-        stk->hash_data = count_hash(stk->data, sizeof(*stk->data));
+        stk->hash_data = count_hash (stk->data, stk->capacity*sizeof(*stk->data));
         stk->hash_stk  = update_hash(stk);
     #endif
     

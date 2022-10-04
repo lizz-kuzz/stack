@@ -124,7 +124,7 @@ void assert_ok(stack *stk) {
             stk->info.number_of_error = stk->info.number_of_error | (1 << ERROR_HASH_STK);
         } 
 
-        if (stk->hash_data != count_hash(stk->data, sizeof(*stk->data))) {       
+        if (stk->hash_data != count_hash (stk->data, stk->capacity*sizeof(*stk->data))) {       
             stk->info.number_of_error = stk->info.number_of_error | (1 << ERROR_HASH_DATA);
         }
 
