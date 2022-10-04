@@ -6,39 +6,60 @@
 #include <assert.h>
 #include <math.h>
 
-#define RELIZE         1
-#define CANARY_ON      2
-#define HASH_ON        3
-#define HASH_CANARY_ON 4
+#define MODE_RELEASE        1 
+#define MODE_CANARY_ON      2
+#define MODE_HASH_ON        3
+#define MODE_HASH_CANARY_ON 4
+#ifdef RELEASE
+    #define MODE MODE_RELEASE
+#endif
+#ifdef CANARY_ON
+    #define MODE MODE_CANARY_ON
+#endif
+#ifdef HASH_ON
+    #define MODE MODE_HASH_ON
+#endif
+#ifdef DEBUG
+    #define MODE MODE_HASH_CANARY_ON
+#endif
 
-#define MODE           1
 #define MULTIPLE       2
 
 
-#if MODE == HASH_CANARY_ON || MODE == CANARY_ON
+#if MODE == MODE_HASH_CANARY_ON || MODE == MODE_CANARY_ON
     #define CANARIES_LEFT  0xDEADF00D
     #define CANARIES_RIGHT 0xDEADBABE
 #endif
 
-#if MODE == HASH_CANARY_ON || MODE == CANARY_ON
+#if MODE == MODE_HASH_CANARY_ON || MODE == MODE_CANARY_ON
     #define ON_CANARY(...) __VA_ARGS__
 #else
     #define ON_CANARY(...)
 #endif
 
-#if MODE == HASH_CANARY_ON || MODE == HASH_ON
+#if MODE == MODE_HASH_CANARY_ON || MODE == MODE_HASH_ON
     #define ON_HASH(...) __VA_ARGS__
 #else
     #define ON_HASH(...)
 #endif
 
+#if MODE != MODE_RELEASE
+    #define ON_DEBUG_INFO(...) __VA_ARGS__
+#else
+    #define ON_DEBUG_INFO(...)
+#endif
 
 
 typedef unsigned long long elem_canary_t;
 typedef double             elem_stk_t;
-// #if elem_stk_t 
 #define POIZON NAN
-// #endif
+
+enum FILE_STATUS {
+    FILE_CLOSE     = 0,
+    FILE_OPEN      = 1,
+    FILE_CLOSE_ADD = 2,
+};
+
 
 
 typedef struct {
@@ -56,19 +77,16 @@ typedef struct {
 
 
 typedef struct {
-    ON_CANARY(elem_canary_t canaries_left;)
-
-    #if MODE != RELIZE
-        stack_info      info;
-    #endif
+    ON_CANARY     (elem_canary_t canaries_left;)
+    ON_DEBUG_INFO (stack_info info;)
 
     elem_stk_t         *data;
     size_t              size;
     size_t              capacity;
 
-    ON_HASH  (unsigned long long hash_stk;)
-    ON_HASH  (unsigned long long hash_data;)
-    ON_CANARY(elem_canary_t canaries_right;)
+    ON_HASH       (unsigned long long hash_data;)
+    ON_HASH       (unsigned long long hash_stk;)
+    ON_CANARY     (elem_canary_t canaries_right;)
 } stack;
 
 enum ERRORS {
