@@ -13,7 +13,7 @@ int main() {
         stack_push(&stk1, i);
     }
 
-    elem_stk_t value = 0;
+    elem_data_t value = 0;
     for (int i = 2; i > 0; i--) {
         stack_pop(&stk1, &value);
     }

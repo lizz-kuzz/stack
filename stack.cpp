@@ -7,15 +7,19 @@ static int file_status = FILE_CLOSE;
 FILE *logs_;
 
 #if MODE == MODE_CANARY_ON || MODE == MODE_HASH_CANARY_ON
-elem_stk_t *create_calloc_data(stack *stk) {
+elem_data_t *create_calloc_data(stack *stk) {
 
-    unsigned long long *data = (unsigned long long *) calloc(1,(sizeof(unsigned long long) + sizeof(elem_stk_t)*stk->capacity + sizeof(unsigned long long)));
+    unsigned long long *data = (unsigned long long *) calloc(1,(sizeof(unsigned long long) + sizeof(elem_data_t)*stk->capacity + sizeof(unsigned long long)));
     
     data[0] = CANARIES_LEFT;
     data++;
-    data[stk->capacity*sizeof(elem_stk_t)/sizeof(unsigned long long)] = CANARIES_RIGHT;
 
-    return (elem_stk_t *)data;
+    char *point = (char *)data;
+    point += stk->capacity*sizeof(elem_data_t);
+    elem_canary_t *point_ = (elem_canary_t *)point;
+    *point_ = CANARIES_RIGHT;
+
+    return (elem_data_t *)data;
 }
 #endif
 
@@ -73,7 +77,7 @@ void stack_ctor_(stack *stk, size_t capacity)
     #if MODE == MODE_HASH_CANARY_ON || MODE == MODE_CANARY_ON
         stk->data = create_calloc_data(stk);
     #else 
-        stk->data = (elem_stk_t *) calloc(capacity + 1, sizeof(elem_stk_t));
+        stk->data = (elem_data_t *) calloc(capacity + 1, sizeof(elem_data_t));
     #endif
     #if MODE != MODE_RELEASE
         fill_data(stk);
@@ -90,7 +94,6 @@ void stack_ctor_(stack *stk, size_t capacity)
         stk->hash_data = count_hash (stk->data, stk->capacity*sizeof(*stk->data));
         stk->hash_stk  = update_hash(stk);
     #endif
-
     ASSERT(stk);
   
 }
@@ -138,20 +141,22 @@ void stack_push(stack *stk, double elem) {
 }
 
 #if MODE == MODE_CANARY_ON || MODE == MODE_HASH_CANARY_ON
-elem_stk_t *stack_realloc_canari(stack *stk) {
+elem_data_t *stack_realloc_canari(stack *stk) {
 
     elem_canary_t *data = (elem_canary_t *)stk->data;
     data--;
 
-    data = (elem_canary_t *) realloc(data, sizeof(elem_stk_t)*stk->capacity + 
-                                                2*sizeof(elem_canary_t));
+    data = (elem_canary_t *) realloc(data, sizeof(elem_canary_t) + sizeof(elem_data_t)*stk->capacity + sizeof(elem_canary_t));
 
     data[0] = CANARIES_LEFT;
     data++;
 
-    data[stk->capacity*sizeof(elem_stk_t)/sizeof(elem_canary_t)] = CANARIES_RIGHT;
+    char *point = (char *)data;
+    point += stk->capacity*sizeof(elem_data_t);
+    elem_canary_t *point_ = (elem_canary_t *)point;
+    *point_ = CANARIES_RIGHT;
 
-    return (elem_stk_t *)data;
+    return (elem_data_t *)data;
 }
 #endif
 
@@ -166,7 +171,7 @@ void stack_resize(stack *stk) {
     }
 
     #if MODE == MODE_RELEASE || MODE == MODE_HASH_ON
-        stk->data = (elem_stk_t *) realloc(stk->data, stk->capacity * sizeof(elem_stk_t));
+        stk->data = (elem_data_t *) realloc(stk->data, stk->capacity * sizeof(elem_data_t));
     #else  
         stk->data = stack_realloc_canari(stk);
     #endif
@@ -184,7 +189,7 @@ void stack_resize(stack *stk) {
     ASSERT(stk);
 }
 
-void stack_pop(stack *stk, elem_stk_t *value) {
+void stack_pop(stack *stk, elem_data_t *value) {
     ASSERT(stk);
 
     *value = stk->data[stk->size];

@@ -51,7 +51,7 @@
 
 
 typedef unsigned long long elem_canary_t;
-typedef double             elem_stk_t;
+typedef double             elem_data_t;
 #define POIZON NAN
 
 enum FILE_STATUS {
@@ -80,7 +80,7 @@ typedef struct {
     ON_CANARY     (elem_canary_t canaries_left;)
     ON_DEBUG_INFO (stack_info info;)
 
-    elem_stk_t         *data;
+    elem_data_t         *data;
     size_t              size;
     size_t              capacity;
 

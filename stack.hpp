@@ -14,9 +14,9 @@
 #endif
 
 
-elem_stk_t *create_calloc_data  (stack *stk);
+elem_data_t *create_calloc_data  (stack *stk);
 
-elem_stk_t *stack_realloc_canari(stack *stk);
+elem_data_t *stack_realloc_canari(stack *stk);
 #if MODE != MODE_RELEASE
 void stack_ctor_  (stack *stk, size_t capacity,  const char *func, 
                                                 int line, 
@@ -31,7 +31,7 @@ void stack_dtor   (stack *stk);
 
 void stack_resize (stack *stk);
 
-void stack_pop    (stack *stk, elem_stk_t *value);
+void stack_pop    (stack *stk, elem_data_t *value);
 
 void fill_data    (stack *stk);
 

@@ -135,7 +135,7 @@ void assert_ok(stack *stk) {
             stk->info.number_of_error = stk->info.number_of_error | (1 << ERROR_CANARIES_STK);        
         }
         
-        if (((elem_canary_t*)stk->data)[-1] != CANARIES_LEFT || ((elem_canary_t*)stk->data)[stk->capacity] != CANARIES_RIGHT) {
+        if (((elem_canary_t*)stk->data)[-1] != CANARIES_LEFT ||  ((elem_canary_t *)stk->data)[stk->capacity] != CANARIES_RIGHT) {
             stk->info.number_of_error = stk->info.number_of_error | (1 << ERROR_CANARIES_DATA);               
         } 
     #endif
