@@ -13,9 +13,10 @@ int main() {
         stack_push(&stk1, i);
     }
 
-    elem_data_t value = 0;
-    for (int i = 2; i > 0; i--) {
-        stack_pop(&stk1, &value);
+    // elem_data_t value = 0;
+    for (int i = 5; i > 0; i--) {
+        // stack_pop(&stk1, &value);
+        printf("%g ", stack_pop(&stk1));
     }
 
     stack_dtor(&stk1);

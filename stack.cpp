@@ -189,13 +189,14 @@ void stack_resize(stack *stk) {
     ASSERT(stk);
 }
 
-void stack_pop(stack *stk, elem_data_t *value) {
+elem_data_t stack_pop(stack *stk) {
+
     ASSERT(stk);
 
-    *value = stk->data[stk->size];
     stk->size--;
+    elem_data_t value = stk->data[stk->size];
 
-    stk->data[stk->size] = NAN;
+    stk->data[stk->size] = POIZON;
     if (stk->size + 1 == stk->capacity/MULTIPLE && stk->size >= 10) 
         stack_resize(stk);
     
@@ -206,7 +207,9 @@ void stack_pop(stack *stk, elem_data_t *value) {
     #endif
     
     ASSERT(stk);
+    return value;
 }
+
 
 
 

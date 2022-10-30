@@ -31,7 +31,7 @@ void stack_dtor   (stack *stk);
 
 void stack_resize (stack *stk);
 
-void stack_pop    (stack *stk, elem_data_t *value);
+elem_data_t stack_pop    (stack *stk);
 
 void fill_data    (stack *stk);
 
